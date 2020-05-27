@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Security;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ASP.NETCoreDemo.Controllers
 {
-    public class ContactUsController : Controller
+    public class AccountController : Controller
     {
         public IActionResult Index()
         {
