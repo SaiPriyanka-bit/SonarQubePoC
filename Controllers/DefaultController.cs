@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ASP.NETCoreDemo.Controllers
 {
-    public class JoinUsController : Controller
+    public class DefaultController : Controller
     {
         public IActionResult Index()
         {
