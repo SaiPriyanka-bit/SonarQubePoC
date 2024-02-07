@@ -1,10 +1,19 @@
 # ASP.NET
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: '.netcore'
+    scannerMode: 'MSBuild'
+    projectKey: 'SonarQube_SonarQube_8efd12ad-f7cc-48ab-92fb-28aa02ba06f2'
+    projectName: 'SonarQube'
 # Build and test ASP.NET projects.
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
 
 trigger:
 - master
+- task: SonarQubeAnalyze@5
+  inputs:
+    jdkversion: 'JAVA_HOME_11_X64'
 
 pool:
   vmImage: 'windows-latest'
